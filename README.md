@@ -5,7 +5,7 @@
   <p>Ad-free experience, offline capabilities, and advanced music discovery.</p>
 
   <a href="https://github.com/iad1tya/Echo-Music/releases/latest"><img src="assets/Windows-button.png" alt="Download for Windows" width="170"/></a>
-  <a href="https://github.com/iad1tya/Echo-Music/releases/latest"><img src="assets/mac-button.png" alt="Download for Mac" width="170"/></a>
+  <a href="https://github.com/EchoMusicApp/Echo-Music-Desktop/releases/download/v1.0/EchoMusic.dmg"><img src="assets/mac-button.png" alt="Download for Mac" width="170"/></a>
 </div>
 
 ---
