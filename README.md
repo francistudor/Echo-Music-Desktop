@@ -120,6 +120,12 @@ If you find this project useful, consider supporting its development.
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=EchoMusicApp/Echo-Music-Desktop&type=timeline&logscale&legend=top-left)](https://www.star-history.com/#EchoMusicApp/Echo-Music-Desktop&type=timeline&logscale&legend=top-left)
+
+---
+
 <div align="center">
     Licensed under <a href="LICENSE">GPL-3.0</a>
 </div>
