@@ -21,7 +21,6 @@ class DownloadsPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(S.of(context).Downloads),
-          centerTitle: true,
           actions: [
             IconButton(
               onPressed: () {
@@ -70,7 +69,6 @@ class _DownloadsBody extends StatelessWidget {
       child: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          constraints: const BoxConstraints(maxWidth: 1000),
           child: Column(
             children: sortedEntries.map((entry) {
               final playlist = entry.value;

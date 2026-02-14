@@ -66,12 +66,10 @@ class _PlaylistView extends StatelessWidget {
         title: playlist['type'] == 'SONGS'
             ? Text(S.of(context).Songs)
             : Text(playlist['title']),
-        centerTitle: true,
       ),
       body: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          constraints: const BoxConstraints(maxWidth: 1000),
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(

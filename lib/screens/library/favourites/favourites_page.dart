@@ -19,7 +19,6 @@ class FavouritesPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(S.of(context).Favourites),
-          centerTitle: true,
         ),
         body: BlocBuilder<FavouritesCubit, FavouritesState>(
           builder: (context, state) {
@@ -46,7 +45,6 @@ class _FavouritesBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Center(
         child: Container(
-          constraints: const BoxConstraints(maxWidth: 1000),
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Column(
             children: [

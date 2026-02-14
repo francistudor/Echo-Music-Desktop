@@ -18,7 +18,6 @@ class HistoryPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(S.of(context).History),
-          centerTitle: true,
         ),
         body: BlocBuilder<HistoryCubit, HistoryState>(
           builder: (context, state) {
@@ -49,7 +48,6 @@ class _HistoryBody extends StatelessWidget {
 
     return Center(
       child: Container(
-        constraints: const BoxConstraints(maxWidth: 1000),
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: ListView.builder(
           itemCount: songs.length,
