@@ -54,7 +54,7 @@ class _BottomPlayerState extends State<BottomPlayer> {
             return const SizedBox(); // or loading indicator
           }
           return ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 500),
+            constraints: const BoxConstraints(maxWidth: 700),
             child: GestureDetector(
               onTap: () {
                 context.push('/player');
