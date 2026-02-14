@@ -55,12 +55,10 @@ class _PlaylistView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(playlist['title']),
-        centerTitle: true,
       ),
       body: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          constraints: const BoxConstraints(maxWidth: 1000),
           child: ListView(
             children: [
               MyPlayistHeader(playlist: playlist),
