@@ -95,7 +95,7 @@ class _SearchPageState extends State<_SearchPage> {
                           Expanded(
                             child: Center(
                               child: ConstrainedBox(
-                                constraints: const BoxConstraints(maxWidth: 350),
+                                constraints: const BoxConstraints(maxWidth: 700),
                                 child: TypeAheadField(
                                   suggestionsCallback: (query) => context
                                       .read<SearchCubit>()
