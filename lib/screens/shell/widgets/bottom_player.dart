@@ -117,7 +117,16 @@ class _BottomPlayerState extends State<BottomPlayer> {
                                       if (currentSong.artist != null ||
                                           currentSong.extras!['subtitle'] !=
                                               null)
-                                        Text(
+                                      GestureDetector(
+                                        onTap: () {
+                                          Modals.showArtistsBottomModal(
+                                            context,
+                                            mediaPlayer.currentSongNotifier.value!.extras!['artists'],
+                                            leading: mediaPlayer.currentSongNotifier.value!.extras!['thumbnails'].first['url'],
+                                            shouldPop: true,
+                                          );
+                                        },
+                                        child: Text(
                                           currentSong.artist ??
                                               currentSong
                                                   .extras!['subtitle'],
@@ -129,6 +138,7 @@ class _BottomPlayerState extends State<BottomPlayer> {
                                                 Colors.white.withValues(alpha: 0.8),
                                           ),
                                         ),
+                                      )
                                     ],
                                   ),
                                 ),

@@ -439,19 +439,29 @@ class _PlayerPageState extends State<PlayerPage> {
                     mode: TextScrollMode.endless,
                   ),
                   const SizedBox(height: 4),
-                  Text(
-                    currentSong?.artist ??
-                        currentSong?.album ??
-                        currentSong?.extras?['subtitle'] ??
-                        '',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white.withValues(alpha: 0.7),
-                      fontWeight: FontWeight.w500,
+                  GestureDetector(
+                    onTap: () {
+                      Modals.showArtistsBottomModal(
+                        context,
+                        mediaPlayer.currentSongNotifier.value!.extras!['artists'],
+                        leading: mediaPlayer.currentSongNotifier.value!.extras!['thumbnails'].first['url'],
+                        shouldPop: true,
+                      );
+                    },
+                    child: Text(
+                      currentSong?.artist ??
+                          currentSong?.album ??
+                          currentSong?.extras?['subtitle'] ??
+                          '',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white.withValues(alpha: 0.7),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                  )
                 ],
               ),
             ),
