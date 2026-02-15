@@ -51,6 +51,9 @@ class DownloadPlaylistHeader extends StatelessWidget {
         mainAxisAlignment:
             isRow ? MainAxisAlignment.start : MainAxisAlignment.center,
         children: [
+          playlist['type'] == 'SONGS'
+            ? Text(S.of(context).Songs, style: TextStyle(fontSize: 35, height: 1.0))
+            : Text(playlist['title'], style: TextStyle(fontSize: 35, height: 1.0)),
           if (playlist['songs'] != null)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),

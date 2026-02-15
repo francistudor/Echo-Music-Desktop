@@ -75,6 +75,8 @@ class MyPlayistHeader extends StatelessWidget {
         mainAxisAlignment:
             isRow ? MainAxisAlignment.start : MainAxisAlignment.center,
         children: [
+          Text((playlist['title'] ?? S.of(context).Favourites), style: TextStyle(fontSize: 35, height: 1.0)),
+          
           if (playlist['songs'] != null)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),

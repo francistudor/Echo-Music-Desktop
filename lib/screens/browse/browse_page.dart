@@ -281,6 +281,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
         mainAxisAlignment:
             isRow ? MainAxisAlignment.start : MainAxisAlignment.center,
         children: [
+          Text(header['title'] ?? '', style: TextStyle(fontSize: 35, height: 1.0)),
+          const SizedBox(height: 8),
           if (header['subtitle'] != null)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),
