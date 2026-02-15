@@ -119,12 +119,14 @@ class _BottomPlayerState extends State<BottomPlayer> {
                                               null)
                                       GestureDetector(
                                         onTap: () {
-                                          Modals.showArtistsBottomModal(
-                                            context,
-                                            mediaPlayer.currentSongNotifier.value!.extras!['artists'],
-                                            leading: mediaPlayer.currentSongNotifier.value!.extras!['thumbnails'].first['url'],
-                                            shouldPop: true,
-                                          );
+                                          if (mediaPlayer.currentSongNotifier.value!.extras!['artists'] != null) {
+                                            Modals.showArtistsBottomModal(
+                                              context,
+                                              mediaPlayer.currentSongNotifier.value!.extras!['artists'],
+                                              leading: mediaPlayer.currentSongNotifier.value!.extras!['thumbnails'].first['url'],
+                                              shouldPop: true,
+                                            );
+                                          }
                                         },
                                         child: Text(
                                           currentSong.artist ??

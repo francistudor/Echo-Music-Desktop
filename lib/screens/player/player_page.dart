@@ -441,12 +441,14 @@ class _PlayerPageState extends State<PlayerPage> {
                   const SizedBox(height: 4),
                   GestureDetector(
                     onTap: () {
-                      Modals.showArtistsBottomModal(
+                      if (mediaPlayer.currentSongNotifier.value!.extras!['artists'] != null) {
+                        Modals.showArtistsBottomModal(
                         context,
                         mediaPlayer.currentSongNotifier.value!.extras!['artists'],
                         leading: mediaPlayer.currentSongNotifier.value!.extras!['thumbnails'].first['url'],
                         shouldPop: true,
-                      );
+                        );
+                      }
                     },
                     child: Text(
                       currentSong?.artist ??
