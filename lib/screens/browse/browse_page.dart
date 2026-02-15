@@ -131,7 +131,6 @@ class _BrowsePageState extends State<_BrowsePage> {
       child: Scaffold(
         appBar: AppBar(
           title: header['title'] != null ? Text(header['title']) : null,
-          centerTitle: true,
         ),
 
         body: BlocBuilder<BrowseCubit, BrowseState>(
@@ -152,7 +151,6 @@ class _BrowsePageState extends State<_BrowsePage> {
                     child: Container(
                       padding:
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-                      constraints: const BoxConstraints(maxWidth: 1000),
                       child: Column(
                         children: [
                           if (state.header['thumbnails'] != null)
